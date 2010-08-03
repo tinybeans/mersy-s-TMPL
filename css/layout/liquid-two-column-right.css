@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : two-column-right.css／２カラムリキッドレイアウト
+作者 : mersy
+
+概要 : ２カラムスタイルのレイアウト。
+コンテンツ左。メニュー右、ナビゲーション右。
+
+制作日 : 2007/2/1
+変更日 : 2007/2/1
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area01{
+	float:left;
+	width:100%;
+	margin-right:-200px;/* Area02の幅と同じ値を入れる */
+}
+/*
+重ならないために指定。Area02の幅と同じ値を入れる。
+h2,pをdivなどでくくってもよいかも。
+------------------------------------------------------- */
+div#Area01 h2,div#Area01 p{
+	margin-right:200px;
+}
+
+div#Area02{
+	float:left;
+	width:200px;
+}
+
+div#Area03{
+	clear:both;
+}
+
+div#footer{
+	clear:both;
+}

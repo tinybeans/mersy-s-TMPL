@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : liquid-two-column-right.css／可変２カラムリキッドレイアウト
+作者 : mersy
+
+概要 : ２カラムスタイルのレイアウト。
+コンテンツ左。メニュー右、ナビゲーション右。
+
+制作日 : 2007/8/4
+変更日 : 2007/8/4
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area01{
+	float:right;
+	width:100%;
+	margin-left:-200px;/* Area02の幅と同じ値を入れる */
+}
+/*
+重ならないために指定。Area02の幅と同じ値を入れる。
+h2,pをdivのinnerなどでくくってもよいかも。
+------------------------------------------------------- */
+div#Area01 h2,div#Area01 p{
+	margin-left:200px;
+}
+
+div#Area02{
+	float:right;
+	width:200px;
+}
+
+div#Area03{
+	clear:both;
+}
+
+div#footer{
+	clear:both;
+}

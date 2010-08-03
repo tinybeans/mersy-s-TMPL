@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : common.css／リセット＆デフォルト
+作者 : mersy
+
+概要 : ブラウザのデフォルト設定をクリア。標準設定。
+
+制作日 : 2006/12/18
+変更日 : 2009/4/7
+
+- ******************************************************************** */
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+  word-break: break-all;
+}
+hr {
+  /*display: none;*/
+	border:none;
+	border-top:1px dashed #ccc;
+	margin:10px 0;
+}
+
+body {
+	color:#333;
+  padding:0;
+  margin:0;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size:x-small;
+	font-size:80%;
+  f\ont-size:13px;
+  /*\*/
+  _font-size:90%;
+  /**/
+}
+
+/*
+12px  75%
+13px 	82%
+14px 	88%
+15px 	94%
+16px 	100%
+*/
+
+/* -- block element */
+
+div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, address {
+  display: block;
+  margin: 0;
+  padding: 0;
+	font-style:normal;
+}
+
+p {
+  margin-bottom:1.5em;
+  padding:0;
+  line-height:1.4;
+  text-align:left;
+}
+
+blockquote {
+  margin:0 0 1em 2em;
+  padding: 0;
+}
+
+blockquote p {
+  margin: 1em 0 1em 0;
+  padding: 0 1em;
+}
+
+blockquote blockquote {
+  margin: 0.2em 0;
+  padding: 0.2em 0 0.2em 0.2em;
+}
+
+/*
+ * Mac IE は pre 要素で overflow すると、初期値である visible 以外の場合、要素の中身が見えなくなる
+ */
+
+pre {
+  width: 95%;
+  overflow: visible;
+  /*\*/
+  overflow: scroll;
+  /**/
+  margin: 1.5em 0;
+  padding: 0.5em 0.8em;
+  font-size: 95%;
+}
+
+del {
+  color: #CCC;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+ins {
+  display: block;
+  margin: 0;
+  padding: 1em;
+  color: #333;
+}
+
+del ins {
+  text-decoration: line-through;
+}
+
+ins h1, ins h2, ins h3, ins h4, ins h5, ins h6, ins div, ins p, ins pre, ins address, ins blockquote, ins dl, ins form, ins fieldset, ins table{
+  margin: 0;
+  padding: 0;
+} 
+
+h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins, p ins, pre ins, address ins, li ins, dt ins, dd ins {
+  display: inline;
+  margin: 0;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+pre ins, code ins, samp ins, var ins, kbd ins {
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+
+/* -- inline element */
+a, abbr, acronym, bdo, big, cite, code, dfn, em, img, kbd, object, q, ruby, samp, small, span, strong, sub, sup, var {
+  display: inline;
+}
+
+abbr, abbr, acronym {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+  cursor: help;
+}
+
+dfn {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+}
+
+a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+	vertical-align:bottom;
+}
+
+a img {
+  border: none;
+  text-decoration: none;
+}
+
+sub, sup {
+  font-size: 50%;
+}
+
+q {
+  margin: 0 0.5em;
+  padding: 0;
+  font-style: italic;
+}
+
+strong {
+  margin: 0 0.5em;
+  padding: 0;
+  font-weight: bold;
+}
+
+em {
+  margin: 0 0.5em;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+code, pre code {
+   font-family: "Courier New", "Osaka－等幅", "ＭＳ Ｐゴシック", monospace;
+}
+
+button {
+  border-color: #FAFAFA #848484 #848484 #FAFAFA;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #F0F0F0;
+  color: #333;
+  font-family: monospace;
+  font-size: 85%;
+  cursor:pointer;
+}
+
+button:active {
+  border-color: #848484 #FAFAFA #FAFAFA #848484;
+}
+
+/* -- list element */
+
+ul, ol {
+  display: block;
+  margin: 0;
+}
+
+dl {
+  display: block;
+  margin: 0;
+}
+
+li {
+  display: list-item;
+  margin:0;
+}
+
+ul {
+	list-style-position:outside;
+}
+
+ol {
+	list-style-position:outside;
+}
+
+ul ul,
+ol ol,
+ol ul {
+  margin: 0;
+}
+
+ul ul li,
+ol ol li,
+ol ul li {
+  margin: 0;
+}
+
+dl {
+  line-height: 1.2;
+}
+
+dt {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+  padding:0;
+}
+
+dd p {
+  line-height: 1.6;
+}
+
+/* -- form */
+
+form {
+  display: block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+fieldset dt {
+  border: none;
+}
+
+fieldset ul,
+fieldset ol,
+fieldset dl {
+  display: block;
+  margin: 1em 0 1em 0.5em;
+}
+
+legend {
+  display: none;
+}
+
+label {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+	cursor: pointer; 
+}
+  
+
+/* -- table */
+
+table, th, td {
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+table {
+  margin: 0;
+  border-width: 1px 0 0 1px;
+  border-color: black;
+  border-style: dotted;
+  border-spacing: 0;
+}
+
+caption {
+  display: none;
+}
+
+tr {
+  border: none;
+}
+
+th, td {
+  padding:0;
+  border-width: 0 1px 1px 0;
+  border-color: black;
+  border-style: dotted;
+  text-align: center;
+}
+/* standard helper classes */
+
+.clr
+{
+   clear: both;
+   overflow: hidden;
+   width: 1px;
+   height: 1px;
+   margin: 0 -1px -1px 0;
+   border: 0;
+   padding: 0;
+   font-size: 0;
+   line-height: 0;
+}
+
+
+.pkg{
+    zoom:1;/*for IE 5.5-7*/
+}
+.pkg:after{/*for modern browser*/
+	content:".";
+	display:block;
+	visibility:hidden;
+	height:0.1px;
+	font-size:0.1em;
+	line-height:0;
+	clear:both;
+}

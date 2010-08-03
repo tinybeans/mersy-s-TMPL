@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : three-column-right_a.css／３カラムレイアウト
+作者 : mersy
+
+概要 : ３カラムスタイル。コンテンツ左。メニュー中、ナビゲーション右。
+
+制作日 : 2006/12/18
+変更日 : 2006/12/18
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:800px;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area01{
+	float:left;
+	width:360px;
+	margin:0 20px 0 0;/* floatとは逆のmargin */
+}
+
+div#Area02{
+	float:left;
+	margin:0 20px 0 0;/* floatとは逆のmargin */
+	width:200px;
+	}
+
+div#Area03{
+	float:left;
+	width:200px;
+}
+
+div#footer{
+	clear:both;
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : two-column-left_a.css／２カラムレイアウト
+作者 : mersy
+
+概要 : ２カラムスタイル。コンテンツ右。メニュー左、ナビゲーション右。
+
+制作日 : 2006/12/18
+変更日 : 2006/12/18
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:800px;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area01{
+	float:right;
+	width:580px;
+}
+
+div#Area02{
+	float:left;
+	width:200px;
+}
+
+div#Area03{
+	clear:right; 
+	float:right;
+	width:580px;
+}
+
+div#footer{
+	clear:both;
+}

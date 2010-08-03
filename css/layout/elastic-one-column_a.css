@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : elastic-one-column_a.css／elastic1カラムレイアウト
+作者 : mersy
+
+概要 : 文字サイズに応じて横幅が可変
+コンテンツ1カラム。メニュー左、ナビゲーション右。
+
+制作日 : 2007/8/4
+変更日 : 2007/8/4
+
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:70em;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area02{
+	float:left;
+	width:34em;
+}
+
+div#Area03{
+	float:right;
+	width:34em;
+}
+
+div#footer{
+	clear:both;
+}

@@ -1,0 +1,123 @@
+■heightLine.js
+ブロックレベル要素の高さを揃えるheightLine.js[to-R]
+http://blog.webcreativepark.net/2007/07/26-010338.html
+
+複数のブロックレベル要素の高さを揃える事ができ、2カラムレイアウトや3カラムレイアウトのそれぞれのカラムの高さを揃えたり、複数のブロックレベル要素をfloatで配置する際の高さを揃えたりできる
+
+【使い方】
+a.統一したいブロックレベル要素に『heightLine』というclass名を付けます。
+そうすれば『heightLine』というclass名が付けられたブロックレベル要素が(高さが最も高いものに)統一されます。
+
+b.heightLineの後ろに-(ハイフン)で続けてグループ名(好きなものをつけて下さい)を指定することにより複数のグループで高さを統一
+
+c.『heightLineParent』というクラス名をつけると、その要素の、子供の要素の高さを統一することができます
+
+
+■iepngfix.js
+透過PNGをCSSで背景に指定してIE6や5.5のバージョンでも綺麗に表示してみる - DesignWalker
+http://www.designwalker.com/2006/12/transparent-png2.html
+
+背景で透過pngを使用する方法。
+
+cssに下記を追加して
+
+* html .iepngfix { behavior: expression(IEPNGFIX.fix(this)); }
+
+.iepngfixの部分を修正して使用する。
+
+
+■topagetop.js
+ページTOPへ戻るリンクを
+<a href="#" onclick="backToTop(); return false">ページのトップへ</a>
+といったかんじでマークアップ
+
+
+■swfobject.js
+swfobject.jsの使い方
+http://www.trick7.com/blog/2006/09/12-165342.php
+
+<!--head内で読み込み-->
+<script type="text/javascript" src="/js/swfobject.js"></script>
+<!--/head内で読み込み-->
+
+<!--埋め込み箇所に記述-->
+<div id="flashcontent">
+swfが表示されない時に、代わりに表示される内容。
+swfサイズの似たような１枚画像でもいいし、
+SEOを考えてHTMLとかで作り込んでも良いです。
+</div>
+<script type="text/javascript">
+ var so = new SWFObject("img/top.swf", "FlashMovie", "200", "100", "8", "#ffffff");
+ so.write("flashcontent");
+</script>
+<!--/埋め込み箇所に記述-->
+
+■pngfix.js／IE6で透過PNGを使用する方法
+小粋空間: Movable Type 4 の透過 PNG ロゴを IE6 以下のブラウザで透過する
+http://www.koikikukan.com/archives/2007/08/14-015513.php
+
+ヘッダに以下を記述
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<![endif]-->
+
+
+■styleswitcher.js
+styleswitcher.js-スタイルシート切り替えjavascript - WEBデザイン　BLOG
+http://weblibrary.s224.xrea.com/weblog/webdesign/javascript/styleswitcherjs.html
+このスクリプトは、クッキーを読み込んで前回設定したスタイルシートを読み込むようにもしていますので、一度設定することでクッキーを削除しない限りは、前回設定したスタイルシートを読み込むようになります。
+
+・外部スタイルシートリンク
+外部スタイルシート指定は以下の通りにtitle属性で各CSSに名前を付けます。
+rel="alternate stylesheet"rel属性値の設定に注意。３つの属性を読み込むようにしていますので、"alternate"は必須です。
+<link rel="alternate stylesheet" type="text/css" href="任意.css" title="任意指定" />
+上記のパターンでいくつかのパターンのCSSを制作しておきます。中にはハイコントラストのCSSも用意しておくといい。
+・スタイルシート切り替えリンク
+a要素にonclickイベントを追加することでスタイルシート切り替えリンクを作成します。setActiveStyleSheet('任意のtitle')には、外部スタイルシートのtitle属性を書き込みます。
+<a href="#" onclick="setActiveStyleSheet('任意のtitle'); return false;">任意のテキスト</a>
+上記で簡単にスタイルシート切り替えを任意のページに組み込むことができます。
+
+■multiload.js
+複数のjsライブラリを利用する際にonloadを書き換える方法[to-R]
+http://blog.webcreativepark.net/2008/02/26-185844.html
+複数のwindow.onloadを行うライブラリ
+
+window.onload = function(){
+	ほにゃらら
+}
+の時は
+addEvent(window,"load",function(){ほにゃらら});
+に書き換え。
+window.onload = ほにゃらら;
+の時は
+addEvent(window,"load",ほにゃらら);
+に書き換える。
+
+
+■jquery.validate.js
+messages_ja.js
+jQueryでフォームの入力チェックする、jquery.validate.js とエラーの日本語化：Goodpic
+http://www.goodpic.com/mt/archives2/2008/06/jqueryjqueryval.html
+記入例
+・必須項目 : class="required" を指定
+・URLの値 : class="url" を指定
+・メールアドレスで必須 : class="required email" を指定
+・最小値を設定 : minlenght="2" を指定
+<head></head>内の、$(document).readyでバリデーションするFormのIDを指定。
+記入例
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#form-host").validate();
+  });
+</script>
+
+■unitpngfix.js
+IEでPNGを表示させる
+http://labs.unitinteractive.com/unitpngfix.php
+HTMLに
+<!--[if lt IE 7]>
+        <script type="text/javascript" src="unitpngfix.js"></script>
+<![endif]--> 
+を記述。
+clear.gifまでのパスをjsの冒頭で指定する。
+現在はimagesフォルダに入れてある

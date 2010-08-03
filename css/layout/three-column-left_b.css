@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* ********************************************************************-
+
+タイトル : three-column-left_b.css／３カラムレイアウト
+作者 : mersy
+
+概要 : ３カラムスタイル。コンテンツ右。メニュー左、ナビゲーション中。順序変更。
+
+制作日 : 2006/12/18
+変更日 : 2006/12/18
+
+- ******************************************************************** */
+body{
+	text-align:center;
+}
+
+div#container{
+	width:800px;
+	margin:0 auto;
+	text-align:left;
+}
+
+div#Area01{
+	float:right;
+	width:360px;
+	margin:0 0 0 20px;/* floatとは逆のmargin */
+}
+
+div#Area02{
+	float:left;
+	width:200px;
+	}
+
+div#Area03{
+	float:right;
+	margin:0 0 0 20px;/* floatとは逆のmargin */
+	width:200px;
+}
+
+div#footer{
+	clear:both;
+}
